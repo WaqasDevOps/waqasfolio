@@ -97,18 +97,19 @@
   >
     <!-- Top Navigation Bar -->
     <nav
-      class="fixed top-0 w-full z-50 bg-[#0A0A0A]/85 backdrop-blur-xl border-b border-border-subtle/50 transition-all duration-300"
+      class="fixed top-0 w-full z-50 bg-[#0A0A0A]/90 backdrop-blur-xl border-b border-border-subtle/50 transition-all duration-300"
     >
       <div
-        class="flex justify-between items-center max-w-container-max mx-auto px-6 py-4"
+        class="flex justify-between items-center max-w-container-max mx-auto px-5 sm:px-6 py-4"
       >
         <a
           href="#"
-          class="text-xl font-bold text-on-surface tracking-tight hover:text-primary transition-colors"
+          class="text-lg sm:text-xl font-bold text-on-surface tracking-tight hover:text-primary transition-colors"
         >
           Waqas Ur Rehman
         </a>
 
+        <!-- Desktop Navigation -->
         <div class="hidden md:flex items-center gap-8">
           <a
             class="text-on-surface-variant font-mono text-sm hover:text-primary transition-colors hover:bg-primary/10 px-3 py-1 rounded"
@@ -127,32 +128,74 @@
           >
         </div>
 
-        <div class="flex items-center gap-4">
+        <!-- Desktop Action & Mobile Toggle -->
+        <div class="flex items-center gap-3">
           <a
             href="./Waqas%20Ur%20Rehman.pdf"
             download="Waqas Ur Rehman.pdf"
-            class="flex items-center gap-2 bg-primary/10 text-primary font-mono text-sm px-4 py-2 rounded-lg border border-primary/20 hover:bg-primary/20 hover:border-primary/40 transition-all cursor-pointer"
+            class="hidden sm:flex items-center gap-2 bg-primary/10 text-primary font-mono text-sm px-4 py-2 rounded-lg border border-primary/20 hover:bg-primary/20 hover:border-primary/40 transition-all cursor-pointer"
           >
             <span class="material-symbols-outlined text-sm">terminal</span>
             Resume
+          </a>
+
+          <!-- Mobile Hamburger Button -->
+          <button
+            id="mobile-menu-btn"
+            aria-label="Toggle Navigation Menu"
+            class="md:hidden p-2 rounded-lg text-on-surface-variant hover:text-primary hover:bg-surface-high border border-border-subtle transition-colors focus:outline-none"
+          >
+            <span id="menu-icon" class="material-symbols-outlined text-2xl flex items-center">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Dropdown Menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-border-subtle bg-[#0d0d0d]/95 backdrop-blur-2xl px-6 py-5 space-y-4 transition-all"
+      >
+        <a
+          class="mobile-nav-link block font-mono text-sm text-on-surface-variant hover:text-primary py-2 transition-colors"
+          href="#about"
+          >About</a
+        >
+        <a
+          class="mobile-nav-link block font-mono text-sm text-on-surface-variant hover:text-primary py-2 transition-colors"
+          href="#products"
+          >Products</a
+        >
+        <a
+          class="mobile-nav-link block font-mono text-sm text-on-surface-variant hover:text-primary py-2 transition-colors"
+          href="#contact"
+          >Contact</a
+        >
+        <div class="pt-2 border-t border-border-subtle">
+          <a
+            href="./Waqas%20Ur%20Rehman.pdf"
+            download="Waqas Ur Rehman.pdf"
+            class="flex items-center justify-center gap-2 w-full bg-primary/10 text-primary font-mono text-sm py-3 rounded-lg border border-primary/20 hover:bg-primary/20 transition-all"
+          >
+            <span class="material-symbols-outlined text-sm">terminal</span>
+            Download Resume
           </a>
         </div>
       </div>
     </nav>
 
-    <main class="pt-28 pb-20">
+    <main class="pt-24 sm:pt-28 pb-16 sm:pb-20">
       <!-- Hero Section -->
       <section
-        class="max-w-container-max mx-auto px-6 mb-28 pt-8 md:pt-16 relative"
+        class="max-w-container-max mx-auto px-5 sm:px-6 mb-20 sm:mb-28 pt-6 sm:pt-16 relative"
       >
         <!-- Ambient Glow -->
         <div
-          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-primary/5 rounded-full blur-[120px] -z-10 pointer-events-none"
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[550px] h-[350px] sm:h-[550px] bg-primary/5 rounded-full blur-[90px] sm:blur-[120px] -z-10 pointer-events-none"
         ></div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
           <!-- Hero Text -->
-          <div class="lg:col-span-7 space-y-7">
+          <div class="lg:col-span-7 space-y-6 sm:space-y-7">
             <div
               class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 font-mono text-xs text-primary"
             >
@@ -164,13 +207,13 @@
 
             <div>
               <h1
-                class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-on-surface mb-4 tracking-tight leading-[1.1]"
+                class="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-on-surface mb-4 tracking-tight leading-[1.15] sm:leading-[1.1]"
               >
                 Website Developer <br />
                 <span class="text-gradient">&amp; Vibe Coder</span>
               </h1>
               <p
-                class="text-base sm:text-lg text-on-surface-variant max-w-2xl leading-relaxed"
+                class="text-sm sm:text-lg text-on-surface-variant max-w-2xl leading-relaxed"
               >
                 I build fast, beautiful, and thoughtful web experiences — from
                 pixel-perfect interfaces to robust full-stack systems. I code
@@ -178,10 +221,10 @@
               </p>
             </div>
 
-            <div class="flex flex-wrap items-center gap-4 pt-2">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
               <a
                 href="#products"
-                class="bg-primary hover:bg-primary-emerald text-[#0A0A0A] font-mono font-medium text-sm px-7 py-3.5 rounded-lg hover:shadow-[0_0_20px_rgba(78,222,163,0.3)] transition-all flex items-center gap-2"
+                class="bg-primary hover:bg-primary-emerald text-[#0A0A0A] font-mono font-medium text-sm px-7 py-3.5 rounded-lg hover:shadow-[0_0_20px_rgba(78,222,163,0.3)] transition-all flex items-center justify-center gap-2 text-center"
               >
                 View My Work
                 <span class="material-symbols-outlined text-base"
@@ -190,7 +233,7 @@
               </a>
               <a
                 href="#contact"
-                class="bg-transparent border border-primary/60 text-primary font-mono font-medium text-sm px-7 py-3.5 rounded-lg hover:bg-primary/10 transition-all"
+                class="bg-transparent border border-primary/60 text-primary font-mono font-medium text-sm px-7 py-3.5 rounded-lg hover:bg-primary/10 transition-all text-center flex items-center justify-center"
               >
                 Get in Touch
               </a>
@@ -198,34 +241,34 @@
 
             <!-- Stats -->
             <div
-              class="grid grid-cols-3 gap-8 pt-10 border-t border-border-subtle/50"
+              class="grid grid-cols-3 gap-3 sm:gap-8 pt-8 sm:pt-10 border-t border-border-subtle/50"
             >
               <div>
-                <div class="text-2xl sm:text-3xl font-bold text-on-surface">
+                <div class="text-xl sm:text-3xl font-bold text-on-surface">
                   5+
                 </div>
                 <div
-                  class="font-mono text-xs sm:text-sm text-on-surface-variant mt-1"
+                  class="font-mono text-[11px] sm:text-sm text-on-surface-variant mt-1"
                 >
                   Years Exp
                 </div>
               </div>
               <div>
-                <div class="text-2xl sm:text-3xl font-bold text-on-surface">
+                <div class="text-xl sm:text-3xl font-bold text-on-surface">
                   28+
                 </div>
                 <div
-                  class="font-mono text-xs sm:text-sm text-on-surface-variant mt-1"
+                  class="font-mono text-[11px] sm:text-sm text-on-surface-variant mt-1"
                 >
                   Products
                 </div>
               </div>
               <div>
-                <div class="text-2xl sm:text-3xl font-bold text-on-surface">
+                <div class="text-xl sm:text-3xl font-bold text-on-surface">
                   18+
                 </div>
                 <div
-                  class="font-mono text-xs sm:text-sm text-on-surface-variant mt-1"
+                  class="font-mono text-[11px] sm:text-sm text-on-surface-variant mt-1"
                 >
                   Happy Clients
                 </div>
@@ -273,20 +316,20 @@
       </section>
 
       <!-- The Architect (About) & Tech Stack Section -->
-      <section class="max-w-container-max mx-auto px-6 mb-28" id="about">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-start">
-          <div class="space-y-6">
-            <h2 class="text-3xl font-bold text-on-surface tracking-tight">
+      <section class="max-w-container-max mx-auto px-5 sm:px-6 mb-20 sm:mb-28" id="about">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
+          <div class="space-y-5 sm:space-y-6">
+            <h2 class="text-2xl sm:text-3xl font-bold text-on-surface tracking-tight">
               The Architect
             </h2>
-            <p class="text-base text-on-surface-variant leading-relaxed">
+            <p class="text-sm sm:text-base text-on-surface-variant leading-relaxed">
               Hey! I'm Waqas — a self-driven full-stack software engineer &amp;
               computer science educator who believes that great design and clean
               architecture aren't mutually exclusive. I approach building
               software like architecture: it needs to be structurally sound,
               highly performant, and intuitive to interact with.
             </p>
-            <p class="text-base text-on-surface-variant leading-relaxed">
+            <p class="text-sm sm:text-base text-on-surface-variant leading-relaxed">
               From crafting multi-industry SaaS POS ecosystems and educational
               LMS platforms to fine-tuning modern interactive web interfaces, I
               focus on shipping clean, resilient code that solves real business
@@ -296,60 +339,60 @@
 
           <div id="stack">
             <h3
-              class="font-mono text-sm text-primary mb-6 flex items-center gap-2"
+              class="font-mono text-sm text-primary mb-5 sm:mb-6 flex items-center gap-2"
             >
               <span class="material-symbols-outlined text-sm"
                 >integration_instructions</span
               >
               Technical Arsenal
             </h3>
-            <div class="flex flex-wrap gap-2.5">
+            <div class="flex flex-wrap gap-2 sm:gap-2.5">
               <span
-                class="px-3.5 py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
+                class="px-3 sm:px-3.5 py-1.5 sm:py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
                 >React.js</span
               >
               <span
-                class="px-3.5 py-2 bg-primary/10 border border-primary/20 rounded-lg font-mono text-xs text-primary"
+                class="px-3 sm:px-3.5 py-1.5 sm:py-2 bg-primary/10 border border-primary/20 rounded-lg font-mono text-xs text-primary"
                 >TypeScript</span
               >
               <span
-                class="px-3.5 py-2 bg-primary/10 border border-primary/20 rounded-lg font-mono text-xs text-primary"
+                class="px-3 sm:px-3.5 py-1.5 sm:py-2 bg-primary/10 border border-primary/20 rounded-lg font-mono text-xs text-primary"
                 >Next.js</span
               >
               <span
-                class="px-3.5 py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
+                class="px-3 sm:px-3.5 py-1.5 sm:py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
                 >Node.js</span
               >
               <span
-                class="px-3.5 py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
+                class="px-3 sm:px-3.5 py-1.5 sm:py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
                 >Tailwind CSS</span
               >
               <span
-                class="px-3.5 py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
+                class="px-3 sm:px-3.5 py-1.5 sm:py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
                 >Electron</span
               >
               <span
-                class="px-3.5 py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
+                class="px-3 sm:px-3.5 py-1.5 sm:py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
                 >PostgreSQL</span
               >
               <span
-                class="px-3.5 py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
+                class="px-3 sm:px-3.5 py-1.5 sm:py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
                 >SQLite / Supabase</span
               >
               <span
-                class="px-3.5 py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
+                class="px-3 sm:px-3.5 py-1.5 sm:py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
                 >REST APIs</span
               >
               <span
-                class="px-3.5 py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
+                class="px-3 sm:px-3.5 py-1.5 sm:py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
                 >Git / GitHub</span
               >
               <span
-                class="px-3.5 py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
+                class="px-3 sm:px-3.5 py-1.5 sm:py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
                 >Figma</span
               >
               <span
-                class="px-3.5 py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
+                class="px-3 sm:px-3.5 py-1.5 sm:py-2 bg-surface-card border border-border-subtle rounded-lg font-mono text-xs text-on-surface hover:border-primary/50 transition-colors"
                 >Vercel / Render</span
               >
             </div>
@@ -358,37 +401,37 @@
       </section>
 
       <!-- My Products Section -->
-      <section class="max-w-container-max mx-auto px-6 mb-28" id="products">
+      <section class="max-w-container-max mx-auto px-5 sm:px-6 mb-20 sm:mb-28" id="products">
         <div
-          class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4"
+          class="flex flex-col sm:flex-row sm:items-end justify-between mb-8 sm:mb-12 gap-3"
         >
           <div>
-            <h2 class="text-3xl font-bold text-on-surface tracking-tight">
+            <h2 class="text-2xl sm:text-3xl font-bold text-on-surface tracking-tight">
               My Products
             </h2>
-            <p class="text-on-surface-variant font-mono text-xs mt-2">
+            <p class="text-on-surface-variant font-mono text-xs mt-1.5">
               Production-ready systems, tools, and digital platforms
             </p>
           </div>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           <!-- Product 1: ShiftPOS -->
           <div
-            class="surface-card rounded-xl p-6 flex flex-col justify-between group"
+            class="surface-card rounded-xl p-5 sm:p-6 flex flex-col justify-between group"
           >
             <div>
               <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-semibold text-on-surface">ShiftPOS</h3>
+                <h3 class="text-lg sm:text-xl font-semibold text-on-surface">ShiftPOS</h3>
                 <span
-                  class="text-xs font-mono px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20"
+                  class="text-[11px] font-mono px-2 py-0.5 rounded bg-primary/10 text-primary border border-primary/20"
                   >Live SaaS</span
                 >
               </div>
               <p class="font-mono text-xs text-primary-emerald mb-3">
                 Multi-Industry SaaS Retail POS &amp; ERP
               </p>
-              <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+              <p class="text-xs sm:text-sm text-on-surface-variant mb-6 leading-relaxed">
                 High-performance retail POS platform featuring instant barcode
                 checkout, 1-click WhatsApp payment reminders, supplier ledgers,
                 and real-time profit analytics with 30-min sandbox test
@@ -430,20 +473,20 @@
 
           <!-- Product 2: ALS LMS -->
           <div
-            class="surface-card rounded-xl p-6 flex flex-col justify-between group"
+            class="surface-card rounded-xl p-5 sm:p-6 flex flex-col justify-between group"
           >
             <div>
               <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-semibold text-on-surface">ALS LMS</h3>
+                <h3 class="text-lg sm:text-xl font-semibold text-on-surface">ALS LMS</h3>
                 <span
-                  class="text-xs font-mono px-2 py-0.5 rounded bg-surface-high text-on-surface-variant border border-border-subtle"
+                  class="text-[11px] font-mono px-2 py-0.5 rounded bg-surface-high text-on-surface-variant border border-border-subtle"
                   >Enterprise</span
                 >
               </div>
               <p class="font-mono text-xs text-primary-emerald mb-3">
                 Library &amp; Clearance Management System
               </p>
-              <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+              <p class="text-xs sm:text-sm text-on-surface-variant mb-6 leading-relaxed">
                 Comprehensive academic management system built for American
                 Lycetuff School System. Automates book cataloging, barcode
                 scanning, student/teacher loans, and 1-click clearance
@@ -485,22 +528,22 @@
 
           <!-- Product 3: BarCode Studio -->
           <div
-            class="surface-card rounded-xl p-6 flex flex-col justify-between group"
+            class="surface-card rounded-xl p-5 sm:p-6 flex flex-col justify-between group"
           >
             <div>
               <div class="flex items-center justify-between mb-2">
-                <h3 class="text-xl font-semibold text-on-surface">
+                <h3 class="text-lg sm:text-xl font-semibold text-on-surface">
                   Barcode Studio
                 </h3>
                 <span
-                  class="text-xs font-mono px-2 py-0.5 rounded bg-surface-high text-on-surface-variant border border-border-subtle"
+                  class="text-[11px] font-mono px-2 py-0.5 rounded bg-surface-high text-on-surface-variant border border-border-subtle"
                   >Desktop / Web</span
                 >
               </div>
               <p class="font-mono text-xs text-primary-emerald mb-3">
                 Offline-First Retail Label &amp; Thermal Print Studio
               </p>
-              <p class="text-sm text-on-surface-variant mb-6 leading-relaxed">
+              <p class="text-xs sm:text-sm text-on-surface-variant mb-6 leading-relaxed">
                 Offline-first retail barcode label generation and inventory
                 management app. Features a high-resolution HTML5 Canvas engine
                 (Code-128 &amp; EAN-13), auto-fitting bold typography, direct
@@ -549,16 +592,16 @@
       </section>
 
       <!-- Contact Section -->
-      <section class="max-w-container-max mx-auto px-6 mb-24" id="contact">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <section class="max-w-container-max mx-auto px-5 sm:px-6 mb-20 sm:mb-24" id="contact">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div>
             <h2
-              class="text-3xl sm:text-4xl font-bold text-on-surface mb-6 tracking-tight"
+              class="text-2xl sm:text-4xl font-bold text-on-surface mb-4 sm:mb-6 tracking-tight"
             >
               Let's build something great
             </h2>
             <p
-              class="text-base sm:text-lg text-on-surface-variant mb-8 leading-relaxed"
+              class="text-sm sm:text-lg text-on-surface-variant mb-6 sm:mb-8 leading-relaxed"
             >
               Have a product in mind, need full-stack engineering expertise, or
               want to collaborate? I'm always open to discussing new
@@ -569,19 +612,19 @@
                 >mail</span
               >
               <a
-                class="font-mono text-sm hover:text-primary transition-colors"
+                class="font-mono text-xs sm:text-sm hover:text-primary transition-colors break-all"
                 href="mailto:itiswaqasfreelance@gmail.com"
                 >itiswaqasfreelance@gmail.com</a
               >
             </div>
           </div>
 
-          <div class="surface-card rounded-xl p-8 border border-border-subtle relative">
+          <div class="surface-card rounded-xl p-5 sm:p-8 border border-border-subtle relative">
             <form
               id="contact-form"
               action="https://formspree.io/f/mvzyydlk"
               method="POST"
-              class="space-y-5"
+              class="space-y-4 sm:space-y-5"
             >
               <div>
                 <label
@@ -590,7 +633,7 @@
                 >
                 <input
                   name="name"
-                  class="w-full bg-[#0A0A0A] border border-border-subtle rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary-emerald focus:ring-1 focus:ring-primary-emerald transition-all text-sm placeholder-on-surface-variant/40"
+                  class="w-full bg-[#0A0A0A] border border-border-subtle rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary-emerald focus:ring-1 focus:ring-primary-emerald transition-all text-base sm:text-sm placeholder-on-surface-variant/40"
                   placeholder="John Doe"
                   type="text"
                   required
@@ -603,7 +646,7 @@
                 >
                 <input
                   name="email"
-                  class="w-full bg-[#0A0A0A] border border-border-subtle rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary-emerald focus:ring-1 focus:ring-primary-emerald transition-all text-sm placeholder-on-surface-variant/40"
+                  class="w-full bg-[#0A0A0A] border border-border-subtle rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary-emerald focus:ring-1 focus:ring-primary-emerald transition-all text-base sm:text-sm placeholder-on-surface-variant/40"
                   placeholder="john@example.com"
                   type="email"
                   required
@@ -617,7 +660,7 @@
                 <textarea
                   name="message"
                   id="msg"
-                  class="w-full bg-[#0A0A0A] border border-border-subtle rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary-emerald focus:ring-1 focus:ring-primary-emerald transition-all text-sm placeholder-on-surface-variant/40"
+                  class="w-full bg-[#0A0A0A] border border-border-subtle rounded-lg px-4 py-3 text-on-surface focus:outline-none focus:border-primary-emerald focus:ring-1 focus:ring-primary-emerald transition-all text-base sm:text-sm placeholder-on-surface-variant/40"
                   placeholder="Tell me about your product or idea..."
                   rows="4"
                   required
@@ -643,9 +686,9 @@
       </section>
 
       <!-- Footer Component -->
-      <footer class="w-full py-12 border-t border-border-subtle/40 mt-20">
+      <footer class="w-full py-10 sm:py-12 border-t border-border-subtle/40 mt-16 sm:mt-20">
         <div
-          class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-6 gap-6 md:gap-0"
+          class="flex flex-col md:flex-row justify-between items-center max-w-container-max mx-auto px-5 sm:px-6 gap-6 md:gap-0 text-center md:text-left"
         >
           <div class="text-on-surface font-bold text-lg">Waqas Ur Rehman</div>
           <div class="text-xs sm:text-sm text-on-surface-variant">
@@ -681,7 +724,7 @@
       id="back-to-top"
       aria-label="Back to top"
       onclick="window.scrollTo({ top: 0, behavior: 'smooth' })"
-      class="fixed bottom-8 right-8 z-50 p-3 rounded-xl bg-[#121212]/90 border border-border-subtle text-on-surface-variant backdrop-blur-md shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none hover:border-primary hover:text-primary hover:shadow-[0_0_20px_rgba(78,222,163,0.3)] hover:-translate-y-1 focus:outline-none"
+      class="fixed bottom-6 right-6 sm:bottom-8 sm:right-8 z-50 p-2.5 sm:p-3 rounded-xl bg-[#121212]/90 border border-border-subtle text-on-surface-variant backdrop-blur-md shadow-2xl transition-all duration-300 opacity-0 translate-y-4 pointer-events-none hover:border-primary hover:text-primary hover:shadow-[0_0_20px_rgba(78,222,163,0.3)] hover:-translate-y-1 focus:outline-none"
     >
       <span
         class="material-symbols-outlined text-2xl flex items-center justify-center"
@@ -691,6 +734,32 @@
     </button>
 
     <script>
+      // Mobile menu toggle
+      const mobileMenuBtn = document.getElementById("mobile-menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+      const menuIcon = document.getElementById("menu-icon");
+      const mobileNavLinks = document.querySelectorAll(".mobile-nav-link");
+
+      if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener("click", () => {
+          const isHidden = mobileMenu.classList.contains("hidden");
+          if (isHidden) {
+            mobileMenu.classList.remove("hidden");
+            menuIcon.textContent = "close";
+          } else {
+            mobileMenu.classList.add("hidden");
+            menuIcon.textContent = "menu";
+          }
+        });
+
+        mobileNavLinks.forEach((link) => {
+          link.addEventListener("click", () => {
+            mobileMenu.classList.add("hidden");
+            menuIcon.textContent = "menu";
+          });
+        });
+      }
+
       // Back to top scroll listener
       const backToTopBtn = document.getElementById("back-to-top");
       window.addEventListener("scroll", () => {
